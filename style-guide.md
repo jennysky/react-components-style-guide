@@ -1,3 +1,5 @@
+<img style="margin-top: 32px" src="https://drive.google.com/uc?export=download&id=14ND2SUGlhYQcpqV7c12PzbpCqZMBBH-7"/>
+
 # UI components Code Style Guide
 
 UI components best practices with React and styled-components
@@ -11,7 +13,7 @@ the best practices to implement components.
 
 
 # Table of contents
-- [Files/Folders naming](#files-folders-definition)
+- [Files Folders naming](#files-folders-definition)
 - [Component definition](#component-definition)
     - [Structure](#structure)
     - [Named Export](#named-export)
@@ -906,3 +908,33 @@ export const Title = ({ children, className }) =>
 [table-of-contents]: #table-of-contents
 
 
+<a class="top-link hide" href="#top">↑</a>
+<a name="top"></a>
+
+<style>
+  @media screen and (prefers-reduced-motion: no-preference) {
+    html {
+    scroll-behavior: smooth;
+    }
+  }
+  
+  /* Style the button */
+  .top-link {
+  transition:       all .25s ease-in-out;
+  position:         fixed;
+  bottom:           0;
+  right:            0;
+  display:          inline-flex;
+  color:            #000000;
+  
+  cursor:           pointer;
+  align-items:      center;
+  justify-content:  center;
+  margin:           0 2em 2em 0;
+  border-radius:    50%;
+  padding:          .25em;
+  width:            1em;
+  height:           1em;
+  background-color: #F8F8F8;
+}
+</style>
