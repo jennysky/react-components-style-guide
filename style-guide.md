@@ -13,7 +13,7 @@ the best practices to implement components.
 
 
 # Table of contents
-- [Files Folders naming](#files-folders-definition)
+- [Files Folders naming](#files-folders-naming)
 - [Component definition](#component-definition)
     - [Structure](#structure)
     - [Named Export](#named-export)
