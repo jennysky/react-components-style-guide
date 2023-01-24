@@ -894,12 +894,12 @@ export const Title = ({ children, className }) =>
 
 
 //or if you need div element 
+export const Title = ({ children, className }) =>
 <Typography as="div" variant="T30" className={className}>
   {children}
 </Typography>
-
-
 ```
+
 <br/>
 
 
