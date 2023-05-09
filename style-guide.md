@@ -25,6 +25,7 @@ the best practices to implement components.
     - [Theme tokens](#theme-tokens)
     - [Export styled components](#export-styled-components)
     - [Styled components properties](#styled-components-properties)
+    - [Styled components hover child](#styled-components-hover-child)
 - [Code standards](#code-standards)
     - [Destruct your props](#destruct-your-props)
     - [Code style](#code-style)
@@ -422,6 +423,53 @@ export const Header = ({ children, className, someProp }) =>
   <StyledHeader $someProp={someProp} className={className}>
     {children}
   </StyledHeader>
+```
+<br/>
+<br/>
+
+### Styled components hover child
+When you need to add style on one of the children after hover on the parent
+
+Bad
+```jsx
+import styled from 'styled-components';
+
+const StyledChild = styled.div`
+   background-color: red;
+`;
+
+const StyledParent = styled.div`
+   &:hover  {
+       .child {
+           background-color: blue;
+       }
+   }
+`;
+
+export const Header = ({ className }) =>
+  <StyledParent className={className}>
+    <StyledChild className={"child"}>hello</StyledChild>
+  </StyledParent>
+```
+
+Good
+```jsx
+import styled from 'styled-components';
+
+const StyledChild = styled.div`
+   background-color: red;
+`;
+
+const StyledParent = styled.div`
+   &:hover ${StyledChild} {
+       background-color: blue;
+   }
+`;
+
+export const Header = ({ className }) =>
+  <StyledParent className={className}>
+    <StyledChild>hello</StyledChild>
+  </StyledParent>
 ```
 <br/>
 <br/>
